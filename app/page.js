@@ -7,12 +7,14 @@ import Skills from "./Skills/page";
 
 export default function page() {
   return (
-    <div className="">
+    <>
       <Header />
       <Talha />
       <About />
-      <Project />
-      <Skills />
-    </div>
+      {/* <Project /> */}
+      {/* <Skills /> */}
+    
+      
+    </>
   );
 }
