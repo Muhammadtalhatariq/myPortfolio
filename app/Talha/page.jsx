@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const page = () => {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen m-3 ">
       <div className="flex flex-col flex-wrap items-center justify-center gap-6">
         <Image
           className="rounded-[50%] items-center justify-center flex border-solid border-8 border-white "
@@ -24,18 +24,18 @@ const page = () => {
         </p>
 
         <p className="  text-red-900 text-2xl sm:text-4xl ">
-          Mern Stack Developer.
+          MERN Stack Developer.
         </p>
 
         <p className="sm:w-auto w-72 text-xl">
           Passionate coder redefining ordinary with innovative code.
         </p>
         <p className="sm:w-auto w-72 text-xl ">
-          My main stack includes React, Next.js, Node.js, Express.js, MongoDB and among
-          other key technologies.
+          My main stack includes React, Node.js, Express.js, MongoDB, Tailwind
+          and among other key technologies.
         </p>
         <div className=" flex flex-wrap justify-center">
-          <Stack spacing={3} direction={"row"}>
+          <Stack spacing={2} direction={"row"}>
             <Button className="text-black gap-3" variant="contained">
               Downlord CV
               <HiOutlineDownload size={20} />
@@ -47,11 +47,11 @@ const page = () => {
           </Stack>
 
           <FaLinkedin
-            className="cursor-pointer m-3 rounded-[50%] border-solid border-8 border-white"
+            className="cursor-pointer m-3 rounded-[50%] border-solid border-8 border-white hover:scale-125"
             size={50}
           />
           <FaGithub
-            className="cursor-pointer m-3 rounded-[50%]  border-solid border-8 border-white"
+            className="cursor-pointer m-3 rounded-[50%]  border-solid border-8 border-white  hover:scale-125"
             size={50}
           />
         </div>

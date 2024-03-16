@@ -11,7 +11,7 @@ export default function page() {
       <Header />
       <Talha />
       <About />
-      {/* <Project /> */}
+      <Project />
       {/* <Skills /> */}
     
       
