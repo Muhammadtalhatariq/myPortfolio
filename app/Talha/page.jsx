@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const page = () => {
   return (
-    <div className="min-h-screen m-3 ">
+    <div className="m-6 mt-16">
       <div className="flex flex-col flex-wrap items-center justify-center gap-6">
         <Image
           className="rounded-[50%] items-center justify-center flex border-solid border-8 border-white "
@@ -27,21 +27,21 @@ const page = () => {
           MERN Stack Developer.
         </p>
 
-        <p className="sm:w-auto w-72 text-xl">
+        <p className="px-3 text-center text-xl">
           Passionate coder redefining ordinary with innovative code.
         </p>
-        <p className="sm:w-auto w-72 text-xl ">
+        <p className="px-3 text-center text-xl items-center ">
           My main stack includes React, Node.js, Express.js, MongoDB, Tailwind
           and among other key technologies.
         </p>
         <div className=" flex flex-wrap justify-center">
           <Stack spacing={2} direction={"row"}>
-            <Button className="text-black gap-3" variant="contained">
+            <Button className="text-black gap-5" variant="contained">
               Downlord CV
               <HiOutlineDownload size={20} />
             </Button>
-            <Button className="gap-3" variant="outlined">
-              Contact me
+            <Button className="gap-5" variant="outlined">
+              Contact me here
               <FaArrowRight size={20} />
             </Button>
           </Stack>

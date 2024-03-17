@@ -10,10 +10,10 @@ import { FaGithub } from "react-icons/fa";
 const page = () => {
   return (
     <>
-      <div className=" min-h-screen">
+      <div className="my-20 ">
         <div className="flex flex-col flex-wrap items-center justify-center gap-6">
           <p className="font-bold text-3xl sm:text-4xl">About Me</p>
-          <p className="w-72 sm:w-2/3 text-xl sm:text2xl leading-10 tracking-tight sm:text-center">
+          <p className=" px-4 sm:w-2/3  text-xl sm:text2xl leading-10 tracking-tight text-center">
             I'm a MERN Stack Developer specializing in React, Node, Express,
             MongoDB and Tailwind. My coding wand crafts enchanting, user-focused
             web experiences, blending innovation and functionality into seamless
