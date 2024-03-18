@@ -14,14 +14,14 @@ const items = [
     title: "todo List",
     desc: "in this project we can use react javascript any many more",
     imageUrl: "/bg.jpg",
-    category : ["ALL", "HTML/CSS", "React"],
+    category :  "REACT"
   },
   {
     id: 2,
     title: "Currency converter",
     desc: "in this project we can use react javascript any many more",
     imageUrl: "/bg.jpg",
-    category: "ALL"
+    category: "REACT"
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const items = [
     title: "Calculator",
     desc: "in this project we can use react javascript any many more",
     imageUrl: "/bg.jpg",
-    category: "React",
+    category: "JAVASCRIPT",
   },
 ];
 
@@ -64,21 +64,16 @@ const App = () => {
 
         <Button 
         onClick={() => setSelectedCategory("All")}
-        className="rounded-full" 
+        className="rounded-full px-3" 
         variant="outlined">
           All
         </Button>
         <Button
+          onClick={() => setSelectedCategory("FRONTEND")}
           className="rounded-full"
           variant="outlined"
         >
           Frontend
-        </Button>
-        <Button
-          className="rounded-full"
-          variant="outlined"
-        >
-          Backend
         </Button>
         <Button
         onClick={() => setSelectedCategory("HTML/CSS")}
@@ -88,13 +83,14 @@ const App = () => {
           HTML/css
         </Button>
         <Button
+          onClick={() => setSelectedCategory("JAVASCRIPT")}
           className="rounded-full"
           variant="outlined"
         >
           Javascript
         </Button>
         <Button
-        onClick={() => setSelectedCategory("React")}
+        onClick={() => setSelectedCategory("REACT")}
           className="rounded-full"
           variant="outlined"
         >
@@ -102,25 +98,32 @@ const App = () => {
         </Button>
       </Stack>
     
-      <div className="flex flex-wrap gap-5 justify-center pt-8">
+      <div className="flex  flex-wrap gap-5 justify-center pt-8">
         {filteredItems.map((item) => (
-          <div key={item.id} className=" ">
-            <Card sx={{ maxWidth: 350 }}>
+          <div key={item.id} className="">
+            <Card
+            className="flex flex-row"
+            sx={{ maxWidth: 350 }}>
               <CardActionArea>
                 <Image
                   className="item-center"
-                  height={100}
+                  height={80}
                   width={350}
                   src={item.imageUrl}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
+                  <Typography 
+                  className="font-bold"
+                  gutterBottom variant="h5" component="div">
                     {item.title}
                   </Typography>
 
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" 
+                 className="text-lg"
+                  >
                     {item.desc}
                   </Typography>
+               
                 </CardContent>
               </CardActionArea>
             </Card>

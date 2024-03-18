@@ -3,7 +3,8 @@ import Menu from './Menu/Menu'
 
 const page = () => {
   return (
-    <div>
+    <div >
+      <p className='font-bold text-3xl sm:text-4xl flex justify-center pb-8'>My Project</p>
       <Menu/>
     </div>
   );

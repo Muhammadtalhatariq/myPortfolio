@@ -4,17 +4,16 @@ import Talha from "./Talha/page";
 import About from "./About/page";
 import Project from "./Project/page";
 import Skills from "./Skills/page";
-
+import Contact from './Contact/page'
 export default function page() {
   return (
     <>
       <Header />
       <Talha />
       <About />
-  
       <Project />
-      {/* <Skills /> */}
-    
+      <Skills />
+    <Contact/>
       
     </>
   );
