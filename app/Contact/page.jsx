@@ -1,14 +1,41 @@
-import React from "react";
+"use client"
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { IoIosSend } from "react-icons/io";
+
 
 const page = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_r9juise",
+        "template_57rdqrp",
+        form.current,
+        "o7hb0h-ldQpKt_uGV"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="py-10">
       <div className="flex flex-wrap  ">
         <div className="sm:w-[55%] p-4 m-auto">
-          <p className="font-bold text-3xl sm:text-4xl p-2 text-center sm:text-start ">Contacts Me</p>
+          <p className="font-bold text-3xl sm:text-4xl p-2 text-center sm:text-start ">
+            Contacts Me
+          </p>
           <p className="text-center  sm:text-start text-xl sm:text2xl leading-10 tracking-tight">
             Currently, I am looking for new opportunities to apply my skills and
             experience in different domains. My inbox is always open for any
@@ -28,26 +55,29 @@ const page = () => {
           </div>
         </div>
 
-        <div className="sm:w-[45%] w-full  px-2 sm:py-16">
-          <form className="flex flex-col gap-4 p-4" action="">
-            <input
-              className="p-2 border-gray-300 border-dotted border-4"
-              placeholder="Enter Your G-mail"
-              type="text"
-            />
-            <input
-              className="p-2 border-gray-300 border-dotted border-4"
-              placeholder="Enter Your Message"
-              type="text-area"
-              value=""
-            />
-            <button
-              className=" flex gap-2 bg-gray-200 items-center w-24 hover:bg-slate-400 rounded-lg px-2"
-              type="button"
-            >
-              Submit <IoIosSend size={40} />
-            </button>
-          </form>
+        <div className="sm:w-[45%] w-full  px-4 sm:py-32">
+            <form
+            className="flex flex-col gap-4 p-4 "
+            ref={form} onSubmit={sendEmail}>
+              <label>Name</label>
+              <input
+               className="p-2 border-gray-300 border-dotted border-4"
+              type="text" name="user_name" />
+              <label>Email</label>
+              <input
+               className="p-2 border-gray-300 border-dotted border-4"
+              type="email" name="user_email" />
+              <label>Message</label>
+              <textarea
+               className="p-2 border-gray-300 border-dotted border-4"
+              name="message" />
+              <input
+               className=" bg-gray-200 items-center w-24 hover:bg-slate-400 rounded-lg p-2"
+              type="submit" value="Send"
+             
+              />
+            </form>
+        
         </div>
       </div>
     </div>
