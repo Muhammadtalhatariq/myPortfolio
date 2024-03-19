@@ -10,7 +10,7 @@ import { FaGithub } from "react-icons/fa";
 const page = () => {
   return (
     <>
-      <div className="my-20 ">
+      <div className="my-20 scroll-mt-24" id="About">
         <div className="flex flex-col flex-wrap items-center justify-center gap-6">
           <p className="font-bold text-3xl sm:text-4xl">About Me</p>
           <p className=" px-4 sm:w-2/3  text-xl sm:text2xl leading-10 tracking-tight text-center">
@@ -20,7 +20,7 @@ const page = () => {
             interaction. Driven by a passion for the extraordinary, every line
             of code I write is a step towards redefining the ordinary.
           </p>
-          <div className=" flex flex-wrap gap-3 items-center">
+          <div className=" flex flex-wrap gap-3 items-center justify-center">
             <IoLogoJavascript
               className="cursor-pointer m-3 rounded-[50%] border-solid border-8 border-white hover:scale-150"
               size={50}

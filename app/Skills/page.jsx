@@ -11,7 +11,7 @@ import { FaGithub } from "react-icons/fa";
 
 const page = () => {
   return (
-    <div className="p-10">
+    <div className=" pt-28" id="Skills">
       <div className="flex flex-col flex-wrap items-center ">
         <p className="font-bold text-3xl sm:text-4xl">MY Skills</p>
         <div className="flex flex-wrap gap-2 sm:gap-4 pt-10 rounded-3xl justify-center  sm:w-1/2">
