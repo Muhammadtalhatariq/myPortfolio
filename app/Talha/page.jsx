@@ -36,7 +36,7 @@ const page = () => {
         <div className=" flex flex-col sm:flex-row flex-wrap justify-center gap-3">
         
             <a
-              href="/cv.pdf"
+              href="/talha.pdf"
               className=" flex items-center px-6 py-2 gap-4 bg-slate-400 hover:bg-slate-500 text-white cursor-pointer rounded-2xl border-solid border-4 border-white"
               variant="contained"
             >

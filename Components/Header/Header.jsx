@@ -1,5 +1,5 @@
-"use client"
-import React, {useState} from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 
 const Header = () => {
@@ -26,29 +26,18 @@ const Header = () => {
     },
   ];
 
- 
- 
   return (
-   
- <div className="flex items-center justify-center m-10">
+    <div className="flex items-center justify-center m-10">
       <div className="bg-white w-96 p-2 rounded-2xl fixed">
         <ul className="flex list-none">
           {navItems.map((item) => (
             <li className="ml-auto" key={item.path}>
-              <Link 
-                 href={item.path}>{item.name}</Link>
+              <Link href={item.path}>{item.name}</Link>
             </li>
           ))}
-
-          
-       
-       
         </ul>
-       
       </div>
     </div>
-   
-   
   );
 };
 
