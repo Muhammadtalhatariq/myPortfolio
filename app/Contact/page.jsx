@@ -29,7 +29,7 @@ const page = () => {
   };
 
   return (
-    <div className="py-10 " id="Contact">
+    <div className="pt-10 " id="Contact">
       <div className="flex flex-wrap  ">
         <div className="sm:w-[55%] p-4 m-auto">
           <p className="font-bold text-3xl sm:text-4xl p-2 text-center sm:text-start ">
@@ -61,7 +61,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="sm:w-[45%] w-full  px-4 sm:py-32">
+        <div className="sm:w-[45%] w-full  px-4 sm:pt-32">
           <form
             className="flex flex-col gap-4 p-4 "
             ref={form}

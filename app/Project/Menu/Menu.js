@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import { motion } from "framer-motion";
 
 const items = [
   {
@@ -118,10 +119,15 @@ const App = () => {
           React
         </Button>
       </Stack>
-
-      <div className="flex  flex-wrap gap-5 justify-center pt-8">
+      <div className="flex  flex-wrap gap-5 justify-center p-4 pt-8">
         {filteredItems.map((item) => (
-          <div key={item.id} className="">
+          <motion.div
+            initial={{ x: -1000 }}
+            animate={{ x: 0 }}
+            whileHover={{ scale: 1.1 }}
+            key={item.id}
+            className=""
+          >
             <Card className="flex flex-row" sx={{ maxWidth: 350 }}>
               <CardActionArea>
                 <Image
@@ -146,7 +152,7 @@ const App = () => {
                 </CardContent>
               </CardActionArea>
             </Card>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 const Header = () => {
   const navItems = [
     {
@@ -27,7 +27,10 @@ const Header = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center m-10">
+    <motion.div
+    initial={{x:-1000}}
+    animate={{x:0}}
+    className="flex items-center justify-center m-10">
       <div className="bg-white w-96 p-2 rounded-2xl fixed">
         <ul className="flex list-none">
           {navItems.map((item) => (
@@ -37,7 +40,7 @@ const Header = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

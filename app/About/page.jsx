@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
@@ -6,11 +8,15 @@ import { SiExpress } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion"
 
 const page = () => {
   return (
     <>
-      <div className="my-20 scroll-mt-24" id="About">
+      <motion.div
+      initial={{x:-1000}}
+      animate={{x:0}}
+      className="my-20 scroll-mt-24" id="About">
         <div className="flex flex-col flex-wrap items-center justify-center gap-6">
           <p className="font-bold text-3xl sm:text-4xl">About Me</p>
           <p className=" px-4 sm:w-2/3  text-xl sm:text2xl leading-10 tracking-tight text-center">
@@ -51,7 +57,7 @@ const page = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
